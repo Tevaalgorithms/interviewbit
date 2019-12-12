@@ -13,7 +13,7 @@
  */
 public class Solution {
     
-    static int pIndex = 0;
+    private int pIndex = 0;
     
     public TreeNode buildTree(ArrayList<Integer> A, ArrayList<Integer> B) {
         if(A.size() < 0 || B.size() < 0) return null;
@@ -29,7 +29,7 @@ public class Solution {
         return createTree(0, B.size() - 1, A, map);
     }
     
-    public TreeNode createTree(int start, int end, 
+    private TreeNode createTree(int start, int end, 
                                ArrayList<Integer> preOrder, 
                                Map<Integer, Integer> inOrder) {
 
